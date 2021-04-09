@@ -19,10 +19,10 @@ node {
     }
   
     stage('deploy') {
-      def resourceGroup = '<resource_group>'
-      def webAppName = '<app_name>'
+      def resourceGroup = 'QuickstartJenkins-rg'
+      def webAppName = 'newjenkinss-app-bansi'
       // login Azure
-      withCredentials([usernamePassword(credentialsId: 'AzureServicePrincipal', passwordVariable: 'ALFoxD2QSVYicfR-1Ju7_hqMy0OWkcqU~u', usernameVariable: 'd15a9414-6856-4aa6-8ca4-8c5b957f840c')]) {
+      withCredentials([usernamePassword(credentialsId: 'AzureServicePrincipal', passwordVariable: 'itWE.g8~K3ljlFB1_2g1ay3_WFJTAXnWSG', usernameVariable: '7d41db0e-b659-4d9d-8f64-e5a64b0b3183')]) {
        sh '''
           az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET -t $AZURE_TENANT_ID
           az account set -s $AZURE_SUBSCRIPTION_ID
